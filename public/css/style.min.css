@@ -1,1 +1,172 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);*{margin:0;padding:0}body{font-family:Roboto}header{display:grid;grid-template-columns:1fr 1fr;height:70px;background:#eb4d4b;padding-left:1.5em;padding-right:1.5em;color:#fff}header h1{font-size:28px}header img{width:25px}header .esq{display:flex;align-content:center;align-items:center}#popup,header .dir{align-items:center;align-content:center}header .dir{display:flex;justify-content:flex-end}a{text-decoration:none;color:inherit}svg{fill:#fff}#popup{position:fixed;top:70px;bottom:0;right:0;left:0;background:#fff;display:none;justify-content:center}.ficheiro,button{align-items:center}.ficheiros h5{font-size:16px;padding-left:.5em}.ficheiro{height:45px;display:flex;align-content:center;padding-left:1.5em}.ficheiro img{padding-right:.5em;width:25px}.ficheiro:nth-child(odd){background:#f1f2f6}.ficheiro:nth-child(even){background:#f7f7f7}.inputfile{width:.1px;height:.1px;opacity:0;overflow:hidden;position:absolute;z-index:-1}.inputfile+label{max-width:80%;font-size:1.25rem;text-overflow:ellipsis;white-space:nowrap;cursor:pointer;display:inline-block;overflow:hidden;padding:.625rem 1.25rem}.no-js .inputfile+label{display:none}button,form{display:flex;align-content:center}.inputfile+label svg{width:1em;height:1em;vertical-align:middle;fill:currentColor;margin-top:-.25em;margin-right:.25em}.inputfile-1+label{color:#f1e5e6;background-color:#eb4d4b}.inputfile-1+label:hover,.inputfile-1.has-focus+label,.inputfile-1:focus+label,button:hover{background-color:#ce3d3b}button{width:44px;font-weight:400;height:44px;background:#eb4d4b;border:none;color:#fff;font-size:1.25rem;margin-left:10px;justify-content:center}button img{width:25px}form{align-items:center;justify-content:center}@media only screen and (max-width:480px){header h1{font-size:16px}}
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+* {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font-family: Roboto
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 70px;
+    background: #eb4d4b;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    color: #fff
+}
+
+header h1 {
+    font-size: 28px
+}
+
+header img {
+    width: 25px
+}
+
+header .esq {
+    display: flex;
+    align-content: center;
+    align-items: center
+}
+
+#popup,
+header .dir {
+    align-items: center;
+    align-content: center
+}
+
+header .dir {
+    display: flex;
+    justify-content: flex-end
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+svg {
+    fill: #fff
+}
+
+#popup {
+    position: fixed;
+    top: 70px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #fff;
+    display: none;
+    justify-content: center
+}
+
+.ficheiro,
+button {
+    align-items: center
+}
+
+.ficheiros h5 {
+    font-size: 16px;
+    padding-left: .5em
+}
+
+.ficheiro {
+    height: 45px;
+    display: flex;
+    align-content: center;
+    padding-left: 1.5em
+}
+
+.ficheiro img {
+    padding-right: .5em;
+    width: 25px
+}
+
+.ficheiro:nth-child(odd) {
+    background: #f1f2f6
+}
+
+.ficheiro:nth-child(even) {
+    background: #f7f7f7
+}
+
+.inputfile {
+    width: .1px;
+    height: .1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1
+}
+
+.inputfile+label {
+    max-width: 80%;
+    font-size: 1.25rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: .625rem 1.25rem
+}
+
+.no-js .inputfile+label {
+    display: none
+}
+
+button,
+form {
+    display: flex;
+    align-content: center
+}
+
+.inputfile+label svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -.25em;
+    margin-right: .25em
+}
+
+.inputfile-1+label {
+    color: #f1e5e6;
+    background-color: #eb4d4b
+}
+
+.inputfile-1+label:hover,
+.inputfile-1.has-focus+label,
+.inputfile-1:focus+label,
+button:hover {
+    background-color: #ce3d3b
+}
+
+button {
+    width: 44px;
+    font-weight: 400;
+    height: 44px;
+    background: #eb4d4b;
+    border: none;
+    color: #fff;
+    font-size: 1.25rem;
+    margin-left: 10px;
+    justify-content: center
+}
+
+button img {
+    width: 25px
+}
+
+form {
+    align-items: center;
+    justify-content: center
+}
+
+@media only screen and (max-width:480px) {
+    header h1 {
+        font-size: 16px
+    }
+}

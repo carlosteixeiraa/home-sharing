@@ -12,6 +12,10 @@ $("#upload").on("click", () => {
     }
 });
 
-$("#btn ").om("click", () => {
+$("#btn ").on("click", () => {
     $("#popup").css('display', 'none')
+})
+
+$("#sair ").on("click", () => {
+    window.location.href = '/sair'
 })

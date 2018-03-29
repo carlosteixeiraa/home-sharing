@@ -3,6 +3,7 @@ html
   head
     title Home Sharing
     meta(charset="utf-8")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel="stylesheet", href="css/style.min.css")
   body
     header
@@ -11,6 +12,10 @@ html
           h1 Home Sharing
      .dir
         img(id="upload", src="media/mais.svg")
+        span &nbsp
+        span &nbsp
+        span &nbsp
+        img(id="sair", src="media/sair.svg")
     .wrapper
       .ficheiros
         - for (var i = 0; i < ficheiros.length; ++i)

@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title Home Sharing
+    meta(charset="utf-8")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel="stylesheet", href="css/login.css")
+  body
+    #wrapper
+      form(action="/api/login", method="post")
+        h2 Home Sharing
+          span  Login
+        input(type="text", name="utilizador", placeholder="Utilizador")
+        br
+        input(type="password", name="password", placeholder="Password")
+        br
+        button(type="submit") Login
