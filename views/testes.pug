@@ -1,0 +1,10 @@
+doctype html
+html
+  head
+    title Home Sharing
+  body
+    form(action='/api/upload', method='post', encType="multipart/form-data")
+      input(type='file', name='ficheiro')
+      br
+      br
+      button(type="submit") Enviar

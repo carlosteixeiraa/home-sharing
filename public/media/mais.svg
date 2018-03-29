@@ -1,0 +1,14 @@
+<svg width="404" height="400" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>background</title>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect id="svg_1" height="401" width="85.999998" y="1" x="159" stroke-width="1.5" fill="#fff"/>
+  <rect id="svg_2" height="401" width="86" y="0" x="159" stroke-width="1.5" fill="#fff"/>
+  <rect id="svg_3" height="86" width="405" y="157" x="0.5" stroke-width="1.5" fill="#fff"/>
+ </g>
+</svg>
