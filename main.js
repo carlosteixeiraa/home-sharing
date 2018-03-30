@@ -2,6 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');    
 var fileUpload = require('express-fileupload');
 var bcrypt = require('bcrypt');
+var fs = require('fs');
 var session = require('express-session');
 var mongoose = require("mongoose");
 var app = express();
@@ -74,6 +75,28 @@ app.get('/download', (req, res) => {
         res.redirect('/login')
     }
 })
+
+app.get('/apagar', (req, res) =>{
+    if(req.session.user) {
+        var s = req.query.s;
+        var caminho = __dirname + '/uploads/';
+        var ficheiroa = caminho + s;
+
+        fs.unlinkSync(ficheiroa);
+
+        Ficheiro.findOneAndRemove({
+            nome: s
+        }, (err) => {
+            if(err) {
+                res.send(err);
+            } else {
+                res.redirect('/');
+            }
+        })
+    } else {
+        res.redirect('/');
+    }
+});
 
 app.post('/api/upload', (req, res) => {
     if(req.session.user) {
