@@ -47,13 +47,13 @@ app.get('/', (req, res) => {
             }
         }); 
     } else {
-        res.redirect('/login')
+        res.redirect('/login');
     }
 });
 
 app.get('/sair', (req, res) => {
     req.session.user = null;
-    res.redirect('/')
+    res.redirect('/');
 })
 
 app.get('/testes', (req, res) => {
@@ -61,7 +61,11 @@ app.get('/testes', (req, res) => {
 });
 
 app.get('/login', (req, res) => {
-    res.render('login');
+    if(req.session.user) {
+        res.redirect('/');
+    } else {
+        res.render('login');
+    }
 });
 
 app.get('/api/download', (req, res) => {
@@ -210,7 +214,7 @@ var contaSchema = new mongoose.Schema({
     }
 })
 
-var Conta = mongoose.model('contas', contaSchema)
+var Conta = mongoose.model('contas', contaSchema);
 var Ficheiro = mongoose.model('ficheiros', ficheiroSchema);
 
 
