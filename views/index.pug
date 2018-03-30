@@ -25,7 +25,7 @@ html
               span &nbsp
               a(href='/api/apagar/?s=' + ficheiros[i].nome)
                img(src="media/apagar.svg")
-              h5= ficheiros[i].nome
+              h5(class="pontos")= ficheiros[i].nome
     #popup
       form(action="/api/upload", method="post", encType="multipart/form-data")
         input#file-1.inputfile.inputfile-1(type='file', name='ficheiro')
