@@ -20,10 +20,10 @@ html
       .ficheiros
         - for (var i = 0; i < ficheiros.length; ++i)
             .ficheiro
-              a(href='/download/?s=' + ficheiros[i].nome)
+              a(href='/api/download/?s=' + ficheiros[i].nome)
                img(src="media/download.svg")
               span &nbsp
-              a(href='/apagar/?s=' + ficheiros[i].nome)
+              a(href='/api/apagar/?s=' + ficheiros[i].nome)
                img(src="media/apagar.svg")
               h5= ficheiros[i].nome
     #popup

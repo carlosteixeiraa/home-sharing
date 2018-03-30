@@ -64,7 +64,7 @@ app.get('/login', (req, res) => {
     res.render('login');
 });
 
-app.get('/download', (req, res) => {
+app.get('/api/download', (req, res) => {
     if(req.session.user) {
         var s = req.query.s;
         var caminho = __dirname + '/uploads/';
@@ -76,7 +76,7 @@ app.get('/download', (req, res) => {
     }
 })
 
-app.get('/apagar', (req, res) =>{
+app.get('/api/apagar', (req, res) =>{
     if(req.session.user) {
         var s = req.query.s;
         var caminho = __dirname + '/uploads/';
