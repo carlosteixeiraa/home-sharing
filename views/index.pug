@@ -6,7 +6,7 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1')
     meta(name="theme-color" content="#eb4d4b")
     link(rel='shortcut icon', href='/media/logo.png', type='image/x-icon') 
-    link(rel="stylesheet", href="css/style.min.css")
+    link(rel="stylesheet", href="css/style.css")
   body
     header
      .esq
@@ -37,6 +37,11 @@ html
           span Selecionar
         button(id="btn", type="submit")
           img(src="media/enviar.svg")
+    #discow
+      #disco
+       h2= usadof
+       progress(value=usado max=total)
+       h2= totalf
 
     script(src="js/jquery.min.js")
     script(src="js/main.js")

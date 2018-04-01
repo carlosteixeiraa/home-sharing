@@ -462,6 +462,10 @@ fast-json-stable-stringify@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/fast-json-stable-stringify/-/fast-json-stable-stringify-2.0.0.tgz#d5142c0caee6b1189f87d3a76111064f86c8bbf2"
 
+fd-diskspace@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/fd-diskspace/-/fd-diskspace-1.0.0.tgz#7ebbb8a0f426dc61c6dabba213a22a4d4221f64f"
+
 finalhandler@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/finalhandler/-/finalhandler-1.1.1.tgz#eebf4ed840079c83f4249038c9d703008301b105"
@@ -950,6 +954,10 @@ path-to-regexp@0.1.7:
 performance-now@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
+
+prettysize@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/prettysize/-/prettysize-1.1.0.tgz#c6c52f87161ff172ea435f375f99831dd9a97bb0"
 
 process-nextick-args@~2.0.0:
   version "2.0.0"

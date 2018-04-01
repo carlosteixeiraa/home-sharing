@@ -1,4 +1,5 @@
 var key = 0;
+var keyd = 0;
 
 $("#upload").on("click", () => {
     if(key == 0) {

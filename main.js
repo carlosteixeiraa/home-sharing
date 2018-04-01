@@ -2,6 +2,8 @@ var express = require('express');
 var bodyParser = require('body-parser');    
 var fileUpload = require('express-fileupload');
 var bcrypt = require('bcrypt');
+var pretty = require('prettysize');
+var ds = require('fd-diskspace');
 var fs = require('fs');
 var session = require('express-session');
 var mongoose = require("mongoose");
@@ -35,6 +37,7 @@ mongoose.connect('mongodb://localhost:27017/home-sharing', (err) => {
 });
 
 app.get('/', (req, res) => {
+    disco();
     if(req.session.user) {
         Ficheiro.find((err, Ficheiros) => {
             if (err) {
@@ -42,7 +45,11 @@ app.get('/', (req, res) => {
             } else {
                 var passar = Ficheiros;
                 res.render('index', {
-                    ficheiros: passar
+                    ficheiros: passar,
+                    totalf: totalf,
+                    usadof: usadof,
+                    total: total,
+                    usado: usado
                 });
             }
         }); 
@@ -52,6 +59,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/sair', (req, res) => {
+    disco();
     req.session.user = null;
     res.redirect('/');
 })
@@ -61,6 +69,7 @@ app.get('/testes', (req, res) => {
 });
 
 app.get('/login', (req, res) => {
+    disco();
     if(req.session.user) {
         res.redirect('/');
     } else {
@@ -69,6 +78,7 @@ app.get('/login', (req, res) => {
 });
 
 app.get('/api/download', (req, res) => {
+    disco();
     if(req.session.user) {
         var s = req.query.s;
         var caminho = __dirname + '/uploads/';
@@ -81,6 +91,7 @@ app.get('/api/download', (req, res) => {
 })
 
 app.get('/api/apagar', (req, res) =>{
+    disco();
     if(req.session.user) {
         var s = req.query.s;
         var caminho = __dirname + '/uploads/';
@@ -103,6 +114,7 @@ app.get('/api/apagar', (req, res) =>{
 });
 
 app.post('/api/upload', (req, res) => {
+    disco();
     if(req.session.user) {
         var ficheiro = req.files.ficheiro;
         console.log(req.files.ficheiro)
@@ -165,6 +177,7 @@ app.post('/api/registar', (req, res) => {
 });
 
 app.post('/api/login', (req, res) => {
+    disco();
     var utilizador = req.body.utilizador;
     var password = req.body.password;
 
@@ -217,6 +230,20 @@ var contaSchema = new mongoose.Schema({
 var Conta = mongoose.model('contas', contaSchema);
 var Ficheiro = mongoose.model('ficheiros', ficheiroSchema);
 
+var totalf;
+var usedf;
+var total;
+var used;
+
+function disco() {
+    var tudo = ds.diskSpaceSync();
+
+    usadof = pretty(tudo.total.used);
+    totalf = pretty(tudo.total.size);
+    usado = tudo.total.used;
+    total = tudo.total.size;
+    
+}
 
 app.listen(porta, () => {
     console.log('Home Sharing a funcionar na porta ' + porta)
