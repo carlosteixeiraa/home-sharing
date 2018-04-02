@@ -6,6 +6,7 @@ var pretty = require('prettysize');
 var disk = require('diskusage');
 var os = require('os');
 var fs = require('fs');
+var compression = require('compression');
 var session = require('express-session');
 var mongoose = require("mongoose");
 var app = express();
@@ -13,6 +14,10 @@ var porta = 80;
 var portassl = 443;
 
 app.set('view engine', 'pug');
+
+app.set('view cache', true);
+
+app.use(compression());
 
 app.use(express.static('public'));
 

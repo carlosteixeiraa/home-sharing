@@ -2,6 +2,7 @@
   "dependencies": {
     "bcrypt": "^1.0.3",
     "body-parser": "^1.18.2",
+    "compression": "^1.7.2",
     "diskusage": "^0.2.4",
     "express": "^4.16.3",
     "express-fileupload": "^0.4.0",
@@ -15,7 +16,8 @@
   "main": "main.js",
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=production && node main.js"
   },
   "author": "Carlos Teixeira",
   "license": "MIT",
