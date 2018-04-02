@@ -61,7 +61,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/sair', (req, res) => {
-    disco();
+    //disco();
     req.session.user = null;
     res.redirect('/');
 })
@@ -71,7 +71,7 @@ app.get('/testes', (req, res) => {
 });
 
 app.get('/login', (req, res) => {
-    disco();
+    //disco();
     if(req.session.user) {
         res.redirect('/');
     } else {
@@ -80,7 +80,7 @@ app.get('/login', (req, res) => {
 });
 
 app.get('/api/download', (req, res) => {
-    disco();
+    //disco();
     if(req.session.user) {
         var s = req.query.s;
         var caminho = __dirname + '/uploads/';
@@ -93,7 +93,7 @@ app.get('/api/download', (req, res) => {
 })
 
 app.get('/api/apagar', (req, res) =>{
-    disco();
+    //disco();
     if(req.session.user) {
         var s = req.query.s;
         var caminho = __dirname + '/uploads/';
@@ -116,7 +116,7 @@ app.get('/api/apagar', (req, res) =>{
 });
 
 app.post('/api/upload', (req, res) => {
-    disco();
+    //disco();
     if(req.session.user) {
         var ficheiro = req.files.ficheiro;
         console.log(req.files.ficheiro)
@@ -179,7 +179,7 @@ app.post('/api/registar', (req, res) => {
 });
 
 app.post('/api/login', (req, res) => {
-    disco();
+    //disco();
     var utilizador = req.body.utilizador;
     var password = req.body.password;
 
