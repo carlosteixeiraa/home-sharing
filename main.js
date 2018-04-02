@@ -3,7 +3,8 @@ var bodyParser = require('body-parser');
 var fileUpload = require('express-fileupload');
 var bcrypt = require('bcrypt');
 var pretty = require('prettysize');
-var ds = require('fd-diskspace');
+var disk = require('diskusage');
+var os = require('os');
 var fs = require('fs');
 var session = require('express-session');
 var mongoose = require("mongoose");
@@ -47,9 +48,9 @@ app.get('/', (req, res) => {
                 res.render('index', {
                     ficheiros: passar,
                     totalf: totalf,
-                    usadof: usadof,
+                    livref: livref,
                     total: total,
-                    usado: usado
+                    livre: livre
                 });
             }
         }); 
@@ -236,13 +237,20 @@ var total;
 var used;
 
 function disco() {
-    var tudo = ds.diskSpaceSync();
+    var path = os.platform() === 'win32' ? 'c:' : '/';
 
-    usadof = pretty(tudo.total.used);
-    totalf = pretty(tudo.total.size);
-    usado = tudo.total.used;
-    total = tudo.total.size;
-    
+    disk.check(path, (err, info) => {
+        if (err) {
+            console.log(err);
+        } else {
+            
+            livref = pretty(info.available);
+            totalf = pretty(info.total);
+            livre = info.available;
+            total = info.total;
+            console.log(info);
+        }
+    });    
 }
 
 app.listen(porta, () => {
