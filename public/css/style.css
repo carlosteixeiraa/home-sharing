@@ -247,4 +247,8 @@ form {
     .ficheiros {
         margin-bottom: 40px;
     }
+
+    progress {
+        width: 120px;
+    }
 }
