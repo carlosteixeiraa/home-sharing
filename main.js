@@ -9,7 +9,8 @@ var fs = require('fs');
 var session = require('express-session');
 var mongoose = require("mongoose");
 var app = express();
-var porta = 3000;
+var porta = 80;
+var portassl = 443;
 
 app.set('view engine', 'pug');
 
@@ -244,9 +245,9 @@ function disco() {
             console.log(err);
         } else {
             
-            livref = pretty(info.available);
+            livref = pretty(info.free);
             totalf = pretty(info.total);
-            livre = info.available;
+            livre = info.free;
             total = info.total;
             console.log(info);
         }
@@ -256,3 +257,8 @@ function disco() {
 app.listen(porta, () => {
     console.log('Home Sharing a funcionar na porta ' + porta)
 });
+
+app.listen(portassl, () => {
+    console.log('Home Sharing a funcionar na porta ' + portassl)
+});
+
