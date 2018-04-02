@@ -249,7 +249,7 @@ function disco() {
             totalf = pretty(info.total);
             livre = info.free;
             total = info.total;
-            console.log(info);
+           // console.log(info);
         }
     });    
 }
