@@ -84,6 +84,7 @@ svg {
     background: #ce3d3b;
     padding: 10px;
     border-radius: 3px;
+    height: 20px;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -233,6 +234,17 @@ form {
     }
 
     #discow {
-        display: none;
+        margin-top: 50px;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+
+    #disco {
+        border-radius: 0px;
+    }
+
+    .ficheiros {
+        margin-bottom: 40px;
     }
 }
