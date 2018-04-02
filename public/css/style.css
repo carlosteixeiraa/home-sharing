@@ -228,6 +228,32 @@ form {
     justify-content: center
 }
 
+/*#carg {
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: #ce3d3b;
+    color: white;
+    text-transform: uppercase;
+    font-weight: normal;
+    display: none;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    z-index: 900;
+}
+
+#area {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+}*/
+
 @media only screen and (max-width:480px) {
     header h1 {
         font-size: 16px

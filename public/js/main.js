@@ -20,3 +20,16 @@ $("#btn ").on("click", () => {
 $("#sair ").on("click", () => {
     window.location.href = '/sair'
 })
+
+/*var drop = document.getElementById("area");
+drop.addEventListener("dragenter", mostrar, false);
+drop.addEventListener("dragleave", tirar, false);
+
+function mostrar() {
+    $("#carg").css('display', 'flex')
+};
+
+function tirar() {
+    $("#carg").css('display', 'none')
+};
+*/
