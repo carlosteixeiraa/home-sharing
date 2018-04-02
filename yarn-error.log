@@ -2,7 +2,7 @@ Arguments:
   D:\Programas Outros\nodejs\node.exe C:\Users\ewe\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add diskusage
 
 PATH: 
-  C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;D:\Programas Outros\nodejs\;D:\cmder;C:\Program Files\MongoDB\Server\3.6\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Programas Outros\PuTTY\;C:\Python30;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;D:\Programas Outros\nodejs\;D:\cmder;C:\Program Files\MongoDB\Server\3.6\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Programas Outros\PuTTY\;C:\Program Files\Microsoft VS Code\bin;C:\Users\ewe\AppData\Roaming\npm;C:\Users\ewe\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Nmap;C:\Python30;
+  D:\cmder\bin;D:\cmder\vendor\conemu-maximus5\ConEmu\Scripts;D:\cmder\vendor\conemu-maximus5;D:\cmder\vendor\conemu-maximus5\ConEmu;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;D:\Programas Outros\nodejs\;D:\cmder;C:\Program Files\MongoDB\Server\3.6\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Programas Outros\PuTTY\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;D:\Programas Outros\nodejs\;D:\cmder;C:\Program Files\MongoDB\Server\3.6\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Programas Outros\PuTTY\;C:\Program Files\Microsoft VS Code\bin;C:\Users\ewe\AppData\Roaming\npm;C:\Users\ewe\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Nmap;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\share\vim\vim74;D:\cmder\
 
 Yarn version: 
   1.5.1
@@ -1514,12 +1514,12 @@ Trace:
   Arguments: /d /s /c node-gyp rebuild
   Directory: D:\Projects\home-sharing\node_modules\diskusage
   Output:
-  D:\Projects\home-sharing\node_modules\diskusage>if not defined npm_config_node_gyp (node "D:\Programas Outros\nodejs\node_modules\npm\bin\node-gyp-bin\\..\..\node_modules\node-gyp\bin\node-gyp.js" rebuild )  else (node "" rebuild ) 
+  CLINK D:\Projects\home-sharing\node_modules\diskusage>if not defined npm_config_node_gyp (node "D:\Programas Outros\nodejs\node_modules\npm\bin\node-gyp-bin\\..\..\node_modules\node-gyp\bin\node-gyp.js" rebuild )  else (node "" rebuild ) 
   gyp info it worked if it ends with ok
   gyp info using node-gyp@3.6.2
   gyp info using node@8.10.0 | win32 | x64
   gyp ERR! configure error 
-  gyp ERR! stack Error: Can't find Python executable "C:\Python30\python.EXE", you can set the PYTHON env variable.
+  gyp ERR! stack Error: Can't find Python executable "python", you can set the PYTHON env variable.
   gyp ERR! stack     at PythonFinder.failNoPython (D:\Programas Outros\nodejs\node_modules\npm\node_modules\node-gyp\lib\configure.js:483:19)
   gyp ERR! stack     at PythonFinder.<anonymous> (D:\Programas Outros\nodejs\node_modules\npm\node_modules\node-gyp\lib\configure.js:508:16)
   gyp ERR! stack     at D:\Programas Outros\nodejs\node_modules\npm\node_modules\graceful-fs\polyfills.js:284:29
@@ -1536,7 +1536,4 @@ Trace:
       at emitTwo (events.js:126:13)
       at ChildProcess.emit (events.js:214:7)
       at maybeClose (internal/child_process.js:925:16)
-      at Socket.stream.socket.on (internal/child_process.js:346:11)
-      at emitOne (events.js:116:13)
-      at Socket.emit (events.js:211:7)
-      at Pipe._handle.close [as _onclose] (net.js:567:12)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:209:5)
